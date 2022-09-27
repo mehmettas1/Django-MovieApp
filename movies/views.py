@@ -80,6 +80,7 @@ def movie_details(request, slug):
     #         selectedMovie = movie
 
     selectedMovie = next(movie for movie in movies if movie["slug"] == slug)
+    
 
     return render(request, 'movie-details.html', {
         "movie": selectedMovie
